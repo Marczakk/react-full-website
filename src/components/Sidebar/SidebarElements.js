@@ -17,8 +17,8 @@ export const SidebarContainer = styled.aside`
     left: 0;
     transition: 0.3s ease-in-out;
     opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-    top: ${({ isOpen }) => (isOpen ? '0' : '-100')};
-
+    top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+  
     
 
 `
@@ -48,6 +48,8 @@ export const SidebarMenu = styled.ul`
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 80px);
     tetx-align: center;
+    position: relative;
+    top: 200px;
 
     @media screen and (max-width: 480px) {
         grid-template-rows: repeat(6, 60px);
@@ -68,7 +70,7 @@ export const SidebarLink = styled(LinkS)`
     cursor: pointer;
 
     &:hover {
-        color: #01bf71;
+        color: #536DFE;
         transition: 0.2s ease-in-out;
     }
 `

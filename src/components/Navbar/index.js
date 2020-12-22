@@ -4,14 +4,14 @@ import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu,
 NavItem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements'
 
 
-function Navbar() {
+function Navbar({ toggle }) {
     return (
         <>
 
             <Nav>
                 <NavbarContainer>
                     <NavLogo to="/">Kamil Marczak </NavLogo>
-                    <MobileIcon>
+                    <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
                     <NavMenu>
@@ -28,9 +28,9 @@ function Navbar() {
                             <NavLinks to="signup">Skills</NavLinks>
                         </NavItem>
                     </NavMenu>
-                    <NavBtn>
+                    {/* <NavBtn>
                         <NavBtnLink to="/signin">Sign in</NavBtnLink>
-                    </NavBtn>
+                    </NavBtn> */}
             
                 </NavbarContainer>
             </Nav>

@@ -11,30 +11,30 @@ import {
 }
      from './SidebarElements'
 
-function Sidebar() {
+function Sidebar({ isOpen, toggle }) {
     return (
-        <SidebarContainer>
-            <Icon>
+        <SidebarContainer isOpen = { isOpen } onClick={ toggle }>
+            <Icon onClick={toggle}>
               <CloseIcon/>
             </Icon>
-            <SidebarWrapper>
+            <SidebarWrapper> 
                 <SidebarMenu>
-                    <SidebarLink to="about">
+                    <SidebarLink to="about" onClick={ toggle }>
                         Home
                     </SidebarLink>
-                    <SidebarLink to="discover">
+                    <SidebarLink to="discover" onClick={ toggle }>
                         About
                     </SidebarLink>
-                    <SidebarLink to="services">
+                    <SidebarLink to="services" onClick={ toggle }>
                         Projects
                     </SidebarLink>
-                    <SidebarLink to="signup">
+                    <SidebarLink to="signup" onClick={ toggle }>
                         Skills
                     </SidebarLink>
                 </SidebarMenu>
-                <SideBtnWrap>
+                {/* <SideBtnWrap>
                     <SidebarRoute to="/signin"> Sign In </SidebarRoute>
-                </SideBtnWrap>
+                </SideBtnWrap> */}
             </SidebarWrapper>
             
         </SidebarContainer>
